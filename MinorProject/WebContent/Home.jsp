@@ -10,6 +10,17 @@
       <link href="https://fonts.googleapis.com/css?family=Lato:100,300,400,300italic" rel="stylesheet" type="text/css">
       <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.3.1/css/bootstrap.min.css" integrity="sha384-ggOyR0iXCbMQv3Xipma34MD+dH/1fQ784/j6cY/iJTQUOhcWr7x9JvoRxT2MZw1T" crossorigin="anonymous">
                                         <title>Omnifood</title>
+<%
+if (session.getAttribute("userid") == null) {
+	session.invalidate();
+	response.sendRedirect("login.jsp");
+}
+if(request.getParameter("flag")!=null){
+	
+	session.removeAttribute("cart");
+}
+
+%>
       
 </head>
 
@@ -23,7 +34,9 @@
              <button style="float:left;width:5%;">&#9776;</button>
                 <img src="img/logo-white.png" alt="omnifood logo" class="logo">
            <ul class="main-nav" style="margin-top:5px";>
-                 <%String userid=(String)session.getAttribute("userid");%> 
+                 <%
+                 String userid=(String)session.getAttribute("userid");
+                 %>
                <li><a href="Menu.jsp">Order Food</a></li> 
                <li><a href="logout.jsp">LogOut</a></li>  
                <li> <%out.println(""+userid+"");%> &#x1F31D</li>        

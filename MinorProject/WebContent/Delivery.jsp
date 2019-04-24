@@ -12,7 +12,7 @@
                                         <title>Omnifood</title>
   <%@include file="DBconnection.jsp" %>
   <%
-  String sql="Select count(*) from foodorder where dilistatus='Dispatch'";
+  String sql="Select count(*) from foodorder where dilistatus='Dispatched'";
 	PreparedStatement smt=con.prepareStatement(sql);
 	ResultSet rs=smt.executeQuery();
 	if(rs.next())

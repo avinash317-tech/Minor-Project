@@ -5,8 +5,32 @@
 <head>
 <meta charset="ISO-8859-1">
 <title>Insert title here</title>
+<style>
+          body, html {
+  height: 100%;
+}
+
+.bg { 
+  /* The image used */
+   background-image: linear-gradient(pink, yellow);
+
+  /* Full height */
+  height: 100%; 
+
+  /* Center and scale the image nicely */
+  background-position: center;
+  background-repeat: no-repeat;
+  background-size: cover;
+    body{
+        background-size: cover;
+        background-position:center;
+        background-repeat: no-repeat;
+        position:relative;
+       background-image: linear-gradient(pink, yellow);
+       }
+</style>
 </head>
-<body>
+<body class="bg">
 <%
 if(session.getAttribute("userid")==null){
 	session.invalidate();

@@ -299,17 +299,17 @@ display: block;
 * {box-sizing: border-box}
 
 /* Full-width input fields */
-  input[type=text], input[type=password] {
+ input[type=number], input[type=text], input[type=password], input[type=email]	  {
   width: 100%;
   padding: 15px;
   margin: 5px 0 22px 0;
   display: inline-block;
   border: none;
-  background: #f1f1f1;
+  opacity: 0.5;
 }
 
 input[type=text]:focus, input[type=password]:focus {
-  background-color: #ddd;
+  background-color: pink;
   outline: none;
 }
 
@@ -369,8 +369,6 @@ button:hover {
   }
 
  }
-
-
 
 
 
