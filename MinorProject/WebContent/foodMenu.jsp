@@ -11,9 +11,39 @@
 
 <meta charset="ISO-8859-1">
 <title>Food Menu</title>
+<style>
+          body, html {
+  height: 100%;
+}
+
+.bg { 
+  /* The image used */
+   background-image: linear-gradient(pink, yellow);
+
+  /* Full height */
+  height: 100%; 
+
+  /* Center and scale the image nicely */
+  background-position: center;
+  background-repeat: no-repeat;
+  background-size: cover;
+    body{
+        background-size: cover;
+        background-position:center;
+        background-repeat: no-repeat;
+        position:relative;
+       background-image: linear-gradient(pink, yellow);
+       }
+</style>
 </head>
-<body>
+<body class="bg">
 <%@include file="DBconnection.jsp" %>
+<nav>
+        <div>
+         <button style="float:left;width:5%;margin:0 auto"><a href="Emplyee.jsp"  style="height:5px">&#9776;</a></button>
+           
+           </div>
+       </nav>
 <%if(session.getAttribute("userid")==null){
 	session.invalidate();
 	response.sendRedirect("login.jsp");
